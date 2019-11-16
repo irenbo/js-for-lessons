@@ -14,10 +14,14 @@ console.log(dateTime.format('LL'));
 let parse = moment('01/12/2016', 'DD/MM/YYYY', true);
 console.log(parse.format('LL'));
 
-let moscow    = current.tz("America/New_York");
+let moscow    = current.tz("Europe/Moscow");
 let losAngeles = moscow.clone().tz("America/Los_Angeles");
 let london     = losAngeles.clone().tz("Europe/London");
 
-console.log(moscow.format("LLL"), losAngeles.format("LLL"), london.format("LLL"));
+console.log(moscow.format("YYYY MMMM dddd - HH:mm"), losAngeles.format("YYYY MMMM dddd - HH:mm"), london.format("YYYY MMMM dddd - HH:mm"));
 
 // задача про самолет
+// самолет - москва - нью-йорк
+// время в полете 10 часов
+// отправление 13:30
+// во сколько он приземлится в нью-йорке по местному времени
