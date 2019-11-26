@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+@mixin flex($direction){
+  display: flex;
+  flex-direction: $direction;
+}
+
+$white: whitesmoke;
+$dark: black;
+
+.task-manager {
+  height: 100vh;
+
+  @include flex(row);
+
+  .menu {
+    @include flex(column);
+
+    flex: 1;
+    background: $dark;
+    color: $white;
+    font-size: 17pt;
+
+    img {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    .title {
+      flex: 1;
+      padding: 10px;
+    }
+
+    nav {
+      flex: 4;
+      @include flex(column);
+      justify-content: center;
+    }
+  }
+
+  .main {
+    flex: 4;
+    @include flex(row);
+    background: $white;
+  }
+
+}
+

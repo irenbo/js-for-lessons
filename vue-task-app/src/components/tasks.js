@@ -1,0 +1,3 @@
+let tasksFromStorage = [];
+
+export {tasksFromStorage};
